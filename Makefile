@@ -24,7 +24,7 @@ code/run:
 
 .PHONY: code/compile
 code/compile:
-	@GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o=$(COMPILE_TARGET) ./cmd/manager
+	@GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -mod=vendor -o=$(COMPILE_TARGET) ./cmd/manager
 
 .PHONY: code/gen
 code/gen:
