@@ -39,7 +39,7 @@ code/fix:
 	@gofmt -w `find . -type f -name '*.go' -not -path "./vendor/*"`
 
 .PHONY: image/build
-image/build: code/compile
+image/build:
 	@operator-sdk build ${REG}/${ORG}/${PROJECT}:${TAG}
 
 .PHONY: image/push
